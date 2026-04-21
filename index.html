@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="title.png">
+    <link rel="icon" href="photos/title.png">
     <title>Mukhtar-Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
@@ -23,7 +22,7 @@
             </div>
             <!-- Theme Toggle Button -->
             <div class="center">
-                <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="theme-toggle" data-action="toggle-theme">
                     <div class="toggle-icon">🌙</div>
                 </div>
             </div>
@@ -37,7 +36,7 @@
                     <li><a href="#Contact">Contact me</a></li>
 
                 </ul>
-                <div class="hamburger" onclick="toggleMenu()">
+                <div class="hamburger" data-action="toggle-menu">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -53,29 +52,30 @@
                 <span id="element"></span>
                 <br>
                 <div class="home-sci">
-                    <a href="https://www.linkedin.com/in/mukhtar-sayyed/" target="self" onclick="openNewTab()"
+                    <a href="https://www.linkedin.com/in/mukhtar-sayyed/" target="_blank" data-link="linkedin"
                         style="--i:10;"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/sd_mukhtar_007/" target="self" style="--i:9;"><i
+                    <a href="https://www.instagram.com/sd_mukhtar_007/" target="_blank" data-link="instagram" style="--i:9;"><i
                             class='bx bxl-instagram'></i></a>
                     <a href="#Contact" style="--i:8;"><i class='bx bxl-whatsapp'></i></a>
                     <!-- <a href="#" style="--i:7;"><i class='bx bxl-facebook'></i></a> -->
                 </div>
                 <div class="btnfront">
-                    <button class="btn ">Download Resume</button>
-                     <a href="https://drive.google.com/file/d/1-1B9EDt2vPLby5zyND7vPRv1M-de_vH0/view?usp=sharing" target="self" style="--i:9;">
-                    
+                    <a href="https://drive.google.com/file/d/1-1B9EDt2vPLby5zyND7vPRv1M-de_vH0/view?usp=sharing" target="_blank" data-link="resume" style="--i:9;">
+                        <button class="btn">Download Resume</button>
+                    </a>
                     <br>
-                    <a href="https://www.github.com/sdmukhtar7709" target="self"><button class="btn">Visit
-                            GitHub</button></a>
+                    <a href="https://www.github.com/sdmukhtar7709" target="_blank" data-link="github">
+                        <button class="btn">Visit GitHub</button>
+                    </a>
                 </div>
             </div>
             <div class="rightsection">
-                <img src="photos/bg.png" alt="dev-png">
+                <img src="photos/bg.png" data-asset="hero" alt="dev-png">
             </div>
         </section>
         <section class="about" id="About">
             <div class="about-img">
-                <img class="imgs" src="photos/.jpg">
+                <img class="imgs" src="photos/proo.jpg" data-asset="about" alt="Mukhtar profile image">
             </div>
             <div class="about-text">
     <h2>About <span>Me</span></h2>
@@ -86,7 +86,7 @@
         I have hands-on experience with technologies like <b>Node.js, Express.js, MongoDB, and React</b>, along with QA tools such as <b>Postman</b> for API testing and SQL for data validation.
         Currently pursuing my <b>B.Tech in Information Technology</b> from GHRCEM Pune (final year), I aim to bridge the gap between <b>development and testing</b> to deliver reliable and efficient software solutions.
     </p>
-    <a href="https://www.github.com/sdmukhtar7709" target="_blank">
+    <a href="https://www.github.com/sdmukhtar7709" target="_blank" data-link="github">
         <button class="btn">Visit GitHub</button>
     </a>
 </div>
@@ -274,9 +274,9 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://chataimukhtar.vercel.app/" class="btn-project" target="_blank">View
+                                <a href="https://chataimukhtar.vercel.app/" class="btn-project" target="_blank" data-link="chatbotDemo">View
                                 </a>
-                                <a href="https://github.com/sdmukhtar7709/ChatBot_Gemini" class="btn-project btn-github"
+                                <a href="https://github.com/sdmukhtar7709/ChatBot_Gemini" class="btn-project btn-github" data-link="chatbotRepo"
                                     target="_blank">GitHub</a>
                             </div>
                         </div>
@@ -365,7 +365,7 @@
                     <br>
                     <div class="contact-lists">
                         <div class="contact-list">
-                            <img src="photos/gmail.png" alt="gmail" class="image-top">
+                            <img src="photos/gmail.png" data-asset="contactMail" alt="gmail" class="image-top">
                             <p class="contct-text">mukhtarsayyed64@gmail.com</p>
                         </div>
                         <div class="contact-list">
@@ -399,6 +399,6 @@
     </main>
     <!-- External JavaScript Files -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="src/mvc/controllers/appController.js"></script>
 </body>
 </html>
