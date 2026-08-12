@@ -6,11 +6,22 @@ import EducationSection from './components/EducationSection'
 import SkillsSection from './components/SkillsSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
+import ResumeSection from './components/ResumeSection'
 import { typedStrings, socialLinks, skillWidgets, projects } from './data/portfolioData'
+
+const navItems = [
+  { href: '#About', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#Education', label: 'Education' },
+  { href: '#resume', label: 'Resume' },
+  { href: '#Contact', label: 'Contact' },
+]
 
 function App() {
   const [theme, setTheme] = useState('light')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('About')
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
@@ -25,9 +36,18 @@ function App() {
   }, [theme])
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section')
+    const sections = document.querySelectorAll('section[id]')
     const observer = new IntersectionObserver(
       (entries) => {
+        const visibleEntries = entries.filter((entry) => entry.isIntersecting)
+        if (visibleEntries.length > 0) {
+          const topEntry = visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+          const id = topEntry.target.id
+          if (navItems.some((item) => item.href.replace('#', '') === id)) {
+            setActiveSection(id)
+          }
+        }
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-in')
@@ -37,7 +57,7 @@ function App() {
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: [0.2, 0.45, 0.7], rootMargin: '0px 0px -20% 0px' }
     )
 
     sections.forEach((section) => observer.observe(section))
@@ -56,21 +76,30 @@ function App() {
     setIsMenuOpen(false)
   }
 
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId)
+    handleCloseMenu()
+  }
+
   return (
     <>
       <HeaderNav
         theme={theme}
+        navItems={navItems}
+        activeSection={activeSection}
         isMenuOpen={isMenuOpen}
         onToggleTheme={handleToggleTheme}
         onToggleMenu={handleToggleMenu}
         onCloseMenu={handleCloseMenu}
+        onNavClick={handleNavClick}
       />
       <main>
         <HeroSection strings={typedStrings} socialLinks={socialLinks} />
         <AboutSection />
-        <EducationSection />
-        <SkillsSection skillWidgets={skillWidgets} />
         <ProjectsSection projects={projects} />
+        <SkillsSection skillWidgets={skillWidgets} />
+        <EducationSection />
+        <ResumeSection />
         <ContactSection />
       </main>
       <footer>

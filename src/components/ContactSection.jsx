@@ -219,7 +219,6 @@ export default function ContactSection() {
               )}
 
               <button
-                style={{ borderRadius: '35px', backgroundColor: 'black', color: 'white', border: '3px solid white', padding: '14px' }}
                 type="submit"
                 className={`send ${isSubmitting ? 'loading' : ''}`}
                 id="submitBtn"

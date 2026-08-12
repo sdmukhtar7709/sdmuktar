@@ -7,7 +7,6 @@ export default function EducationSection() {
           <div className="education-card">
             <div className="education-header">
               <h3>B.Tech in Information Technology</h3>
-              <span className="education-period">2023 – 2026</span>
             </div>
             <div className="education-details">
               <h4>G H Raisoni College of Engineering and Management, Pune</h4>

@@ -1,4 +1,4 @@
-export default function HeaderNav({ theme, onToggleTheme, isMenuOpen, onToggleMenu, onCloseMenu }) {
+export default function HeaderNav({ theme, navItems, activeSection, onToggleTheme, isMenuOpen, onToggleMenu, onCloseMenu, onNavClick }) {
   return (
     <header>
       <nav>
@@ -20,12 +20,20 @@ export default function HeaderNav({ theme, onToggleTheme, isMenuOpen, onToggleMe
 
         <div className="right">
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <li><a href="#home" onClick={onCloseMenu}>Home</a></li>
-            <li><a href="#About" onClick={onCloseMenu}>About</a></li>
-            <li><a href="#skills" onClick={onCloseMenu}>Skills</a></li>
-            <li><a href="#projects" onClick={onCloseMenu}>Projects</a></li>
-            <li><a href="#Education" onClick={onCloseMenu}>Education</a></li>
-            <li><a href="#Contact" onClick={onCloseMenu}>Contact me</a></li>
+            {navItems.map((item) => {
+              const itemId = item.href.replace('#', '')
+              return (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={() => onNavClick(itemId)}
+                    className={`nav-link ${activeSection === itemId ? 'active' : ''}`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
 
           <button
