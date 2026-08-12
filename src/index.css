@@ -2101,10 +2101,30 @@ input:focus, textarea:focus {
     padding: 25px 0;
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    border-top: none;
     font-weight: 300;
     margin-top: 70px;
     color: #94a3b8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.footer-links a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e2e8f0;
 }
 
 footer {
@@ -2278,7 +2298,9 @@ body.light-theme .theme-toggle {
 
 body.light-theme .nav-links {
     background: rgba(248, 250, 252, 0.95);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 body.light-theme .leftsection {

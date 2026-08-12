@@ -9,12 +9,12 @@ import ContactSection from './components/ContactSection'
 import { typedStrings, socialLinks, skillWidgets, projects } from './data/portfolioData'
 
 function App() {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
-    const initialTheme = savedTheme === 'light' ? 'light' : 'dark'
+    const initialTheme = savedTheme === 'dark' ? 'dark' : 'light'
     setTheme(initialTheme)
     document.body.classList.toggle('light-theme', initialTheme === 'light')
   }, [])
@@ -76,6 +76,11 @@ function App() {
       <footer>
         <div className="last-text">
           <p>Developed with love by Muktar Sayyad © 2026</p>
+          <div className="footer-links">
+            <a href="https://www.linkedin.com/in/mukhtar-sayyed/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/sdmukhtar7709" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="mailto:muktarsayyad2003@gmail.com">Email</a>
+          </div>
         </div>
       </footer>
     </>

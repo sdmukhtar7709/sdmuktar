@@ -124,13 +124,13 @@ export default function ContactSection() {
           <h4>Let's Work Together</h4>
           &nbsp;
           <p className="conatct-p">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m a Full Stack Developer specializing in creating dynamic and user-friendly websites. Whether you need a web solution, UI/UX improvements, or collaboration, feel free to reach out. You can contact me via email at mukhtarsayyed64@gmail.com or connect on <a href="https://www.linkedin.com/in/mukhtar-sayyed/" target="_blank" rel="noreferrer">LinkedIn</a>.&nbsp; Let’s build something amazing together! Looking forward to hearing from you.
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m a Full Stack Developer specializing in creating dynamic and user-friendly websites. Whether you need a web solution, UI/UX improvements, or collaboration, feel free to reach out. You can contact me via email at muktarsayyad2003@gmail.com or connect on <a href="https://www.linkedin.com/in/mukhtar-sayyed/" target="_blank" rel="noreferrer">LinkedIn</a>.&nbsp; Let’s build something amazing together! Looking forward to hearing from you.
           </p>
           <br />
           <div className="contact-lists">
             <div className="contact-list">
               <img src="/assets/gmail.png" data-asset="contactMail" alt="gmail" className="image-top" width="512" height="512" loading="lazy" decoding="async" />
-              <p className="contct-text">mukhtarsayyed64@gmail.com</p>
+              <p className="contct-text">muktarsayyad2003@gmail.com</p>
             </div>
             <div className="contact-list">
               <p className="contct-text"></p>
