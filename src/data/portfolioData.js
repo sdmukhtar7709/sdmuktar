@@ -94,16 +94,24 @@ export const projects = [
     alt: 'Online food ordering system preview',
   },
   {
-    title: 'Responsive ChatBot',
-    
-    description:
-      'AI chatbot with real-time responses, image processing, and contextual conversations.',
-    tags: ['HTML,CSS', 'External APIs', 'JavaScript'],
-    github: 'https://github.com/sdmukhtar7709/ChatBot_Gemini',
-    demo: 'https://chataimukhtar.vercel.app/',
-    image: '/assets/taskmag.avif',
-    alt: 'Responsive ChatBot placeholder',
-  },
+  title: 'ChatMinds - AI Studio',
+
+  description:
+    'Unified multi-AI chat platform with streaming responses, voice features, and responsive design.',
+
+  tags: [
+    'React',
+    ,
+    'JavaScript',
+    'AI APIs',
+    'Responsive Design'
+  ],
+
+  github: 'https://github.com/sdmukhtar7709/MultiAI-Chat-Studio',
+  demo: 'https://chatminds-7p1t.onrender.com/',
+  image: '/assets/aichat.jpeg',
+  alt: 'ChatMinds — Multi-AI Chat Studio preview',
+},
   {
     title: 'WorkBoard',
     description:
