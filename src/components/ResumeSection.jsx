@@ -9,14 +9,14 @@ export default function ResumeSection() {
         </div>
 
         <div className="resume-actions">
-          <a href="/resume.pdf" download="Muktar_Sayyad_Resume.pdf" className="resume-btn resume-btn-primary">
+          <a href="https://drive.google.com/file/d/1yyl0NVHOBUHkEJZYyrZ5WWqR7fLFKBet/view?usp=sharing" className="resume-btn resume-btn-primary" target="_blank" rel="noopener noreferrer">
             <span className="resume-btn-icon resume-btn-icon-download">
               <i className='bx bx-download'></i>
             </span>
             <span>Download PDF</span>
           </a>
 
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-btn resume-btn-secondary">
+          <a href="https://drive.google.com/file/d/1yyl0NVHOBUHkEJZYyrZ5WWqR7fLFKBet/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume-btn resume-btn-secondary">
             <span className="resume-btn-icon resume-btn-icon-view">
               <i className='bx bx-show-alt'></i>
             </span>
