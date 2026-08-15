@@ -10,9 +10,10 @@ export const navLinks = [
 export const typedStrings = [
   'Full Stack Developer',
   'Frontend Developer',
-  'UI/UX Enthusiast',
-  'Problem Solver',
   'Tech Enthusiast',
+  'MERN Stack Developer',
+  'Problem Solver',   
+  ,
 ]
 
 export const socialLinks = [

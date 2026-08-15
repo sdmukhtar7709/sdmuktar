@@ -3,7 +3,7 @@ export default function HeaderNav({ theme, navItems, activeSection, onToggleThem
     <header>
       <nav>
         <div className="left">
-          <a href="#home" className="logo-link" onClick={onCloseMenu}>Welcome To My Portfolio</a>
+          <a href="#home" className="logo-link" onClick={onCloseMenu}>Portfolio</a>
         </div>
 
         <div className="center">
