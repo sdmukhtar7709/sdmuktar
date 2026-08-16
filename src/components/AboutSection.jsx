@@ -28,9 +28,9 @@ export default function AboutSection() {
         <a href="https://www.github.com/sdmukhtar7709" target="_blank" rel="noreferrer" data-link="github">
           <button type="button" className="btn">Visit GitHub</button>
         </a>
-        <a href="https://work-board-zeta.vercel.app/dashboard" target="_blank" rel="noreferrer" data-link="dashboard">
+        {/* <a href="https://work-board-zeta.vercel.app/dashboard" target="_blank" rel="noreferrer" data-link="dashboard">
           <button type="button" className="btn">Open Dashboard</button>
-        </a>
+        </a> */}
       </div>
     </section>
   )
