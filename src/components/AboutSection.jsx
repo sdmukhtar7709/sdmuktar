@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section className="about" id="About">
       <div className="about-img">
-        <img className="imgs" src="/assets/proo.jpg" data-asset="about" alt="Mukhtar profile image" width="960" height="1088" loading="lazy" decoding="async" />
+        <img className="imgs" src="" data-asset="about" alt="Mukhtar profile image" width="960" height="1088" loading="lazy" decoding="async" />
       </div>
 
       <div className="about-text">
