@@ -10,7 +10,7 @@ export default function EducationSection() {
             </div>
             <div className="education-details">
               <h4>G H Raisoni College of Engineering and Management, Pune</h4>
-              <p className="education-location">Pune, Maharashtra</p>
+              <p className="education-location">Savitribai Phule Pune University, Pune, Maharashtra</p>
               <p className="education-gpa">Current CGPA: <strong>8.11</strong></p>
               <p className="education-gpa">Intern -(DIAT) DRDO <strong></strong> ( jun 15 2025- Dec 15 2025 )</p>
               <p className="education-gpa">SDE Intern  - Indux Technology <strong></strong> ( 6 Feb 2026 - Present )</p>
